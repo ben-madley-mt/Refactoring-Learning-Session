@@ -8,8 +8,9 @@ end
 
 result = run_tests
 while result === 0
+  puts "\e[32mPASSING\e[0m"
   sleep 2
   result = run_tests
 end
 
-puts "TESTS FAILED"
+puts "\e[31mTESTS FAILED!\e[0m"
