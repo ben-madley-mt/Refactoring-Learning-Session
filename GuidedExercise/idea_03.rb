@@ -1,6 +1,6 @@
 class Idea03
   # Here we recalculate the average number every iteration. We should extract it as a variable.
-  def extract_a_variable(number_list)
+  def introduce_a_variable(number_list)
     big_numbers = []
 
     number_list.each do |number|

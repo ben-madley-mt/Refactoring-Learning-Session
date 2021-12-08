@@ -29,19 +29,19 @@ class TestIdeas < Minitest::Test
   end
 
   def test_extracts_numbers_bigger_than_average
-    assert_equal([1], Idea03.new.extract_a_variable([-1, 1]))
+    assert_equal([1], Idea03.new.introduce_a_variable([-1, 1]))
   end
 
   def test_numbers_must_be_strictly_bigger
-    assert_equal([1], Idea03.new.extract_a_variable([-1, 0, 1]))
+    assert_equal([1], Idea03.new.introduce_a_variable([-1, 0, 1]))
   end
 
   def test_list_can_be_empty
-    assert_equal([], Idea03.new.extract_a_variable([]))
+    assert_equal([], Idea03.new.introduce_a_variable([]))
   end
 
   def test_if_all_numbers_the_same_then_no_numbers_returned
-    assert_equal([], Idea03.new.extract_a_variable([6, 6, 6, 6]))
+    assert_equal([], Idea03.new.introduce_a_variable([6, 6, 6, 6]))
   end
 
   def test_counts_vowels_in_each_word
