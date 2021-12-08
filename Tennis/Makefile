@@ -1,2 +1,2 @@
 test:
-	bundle exec ruby -Ilib:test tennis_test.rb
+	 bundle exec ruby run_tests.rb
