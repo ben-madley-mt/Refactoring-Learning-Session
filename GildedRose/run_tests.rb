@@ -9,7 +9,7 @@ end
 result = run_tests
 while result === 0
   puts "\e[32mPASSING\e[0m"
-  sleep 2
+  sleep 1
   result = run_tests
 end
 
