@@ -71,4 +71,12 @@ class TestIdeas < Minitest::Test
   def test_adds_20_in_empty_array
     assert_equal([], Idea06.new.inline_variables([]))
   end
+
+  def test_odd
+    assert_equal(22, Idea07.new.take_the_hint(7))
+  end
+
+  def test_even
+    assert_equal(17, Idea07.new.take_the_hint(34))
+  end
 end
