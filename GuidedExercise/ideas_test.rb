@@ -140,4 +140,44 @@ class TestIdeas < Minitest::Test
   def test_fibonacci_9
     assert_equal(34, Idea09.new.overly_obfuscated(9))
   end
+
+  def test_add_2_numbers
+    assert_equal(5, Idea10.new.under_abstracted('+', 2, 3))
+  end
+
+  def test_add_list_numbers
+    assert_equal(5, Idea10.new.under_abstracted('+', [2, 3]))
+  end
+
+  def test_times_2_numbers
+    assert_equal(6, Idea10.new.under_abstracted('x', 2, 3))
+  end
+
+  def test_times_list_numbers
+    assert_equal(6, Idea10.new.under_abstracted('x', [2, 3]))
+  end
+
+  def test_subtract_2_numbers
+    assert_equal(-1, Idea10.new.under_abstracted('-', 2, 3))
+  end
+
+  def test_subtract_list_numbers
+    assert_equal(-1, Idea10.new.under_abstracted('-', [2, 3]))
+  end
+
+  def test_divide_2_numbers
+    assert_equal(2, Idea10.new.under_abstracted('/', 4, 2))
+  end
+
+  def test_divide_list_numbers
+    assert_equal(2, Idea10.new.under_abstracted('/', [4, 2]))
+  end
+
+  def test_empy_always_0
+    assert_equal(0, Idea10.new.under_abstracted('+', []))
+    assert_equal(0, Idea10.new.under_abstracted('x', []))
+    assert_equal(0, Idea10.new.under_abstracted('-', []))
+    assert_equal(0, Idea10.new.under_abstracted('/', []))
+  end
+
 end
