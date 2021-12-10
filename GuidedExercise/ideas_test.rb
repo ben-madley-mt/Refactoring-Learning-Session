@@ -104,4 +104,40 @@ class TestIdeas < Minitest::Test
     assert_equal(true, Idea08.new.move_and_abstract('TONY', '70N7'))
     assert_equal(true, Idea08.new.move_and_abstract('70N7', 'TONY'))
   end
+
+  def test_fibonacci_1
+    assert_equal(1, Idea09.new.overly_obfuscated(1))
+  end
+
+  def test_fibonacci_2
+    assert_equal(1, Idea09.new.overly_obfuscated(2))
+  end
+
+  def test_fibonacci_3
+    assert_equal(2, Idea09.new.overly_obfuscated(3))
+  end
+
+  def test_fibonacci_4
+    assert_equal(3, Idea09.new.overly_obfuscated(4))
+  end
+
+  def test_fibonacci_5
+    assert_equal(5, Idea09.new.overly_obfuscated(5))
+  end
+
+  def test_fibonacci_6
+    assert_equal(8, Idea09.new.overly_obfuscated(6))
+  end
+
+  def test_fibonacci_7
+    assert_equal(13, Idea09.new.overly_obfuscated(7))
+  end
+
+  def test_fibonacci_8
+    assert_equal(21, Idea09.new.overly_obfuscated(8))
+  end
+
+  def test_fibonacci_9
+    assert_equal(34, Idea09.new.overly_obfuscated(9))
+  end
 end
