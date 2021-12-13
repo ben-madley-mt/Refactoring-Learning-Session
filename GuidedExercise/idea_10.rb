@@ -23,7 +23,7 @@ class Idea10
       symbol = :-
       result = number_list.shift
       result = number_list.reduce(result, symbol)
-    elsif operation == '/'
+    elsif operation == '÷'
       symbol = :/
       result = number_list.shift
       result = number_list.reduce(result, symbol)

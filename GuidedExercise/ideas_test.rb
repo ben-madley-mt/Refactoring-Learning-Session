@@ -166,22 +166,22 @@ class TestIdeas < Minitest::Test
   end
 
   def test_divide_2_numbers
-    assert_equal(2, Idea10.new.under_abstracted('/', 4, 2))
+    assert_equal(2, Idea10.new.under_abstracted('÷', 4, 2))
   end
 
   def test_divide_list_numbers
-    assert_equal(2, Idea10.new.under_abstracted('/', [4, 2]))
+    assert_equal(2, Idea10.new.under_abstracted('÷', [4, 2]))
   end
 
   def test_divide_list_many_numbers
-    assert_equal(1, Idea10.new.under_abstracted('/', [8, 4, 2]))
+    assert_equal(1, Idea10.new.under_abstracted('÷', [8, 4, 2]))
   end
 
   def test_empy_always_0
     assert_equal(0, Idea10.new.under_abstracted('+', []))
     assert_equal(0, Idea10.new.under_abstracted('x', []))
     assert_equal(0, Idea10.new.under_abstracted('-', []))
-    assert_equal(0, Idea10.new.under_abstracted('/', []))
+    assert_equal(0, Idea10.new.under_abstracted('÷', []))
   end
 
 end
