@@ -11,19 +11,22 @@ class Idea10
       return 0
     end
 
-    # THINK OF WAY TO DO THIS THAT'S EASIER FOR A NOVICE TO HANDLE
     if operation == '+'
+      symbol = :+
       result = number_list.shift
-      number_list.each { |number| result = result + number }
+      result = number_list.reduce(result, symbol)
     elsif operation == 'x'
+      symbol = :*
       result = number_list.shift
-      number_list.each { |number| result = result * number }
+      result = number_list.reduce(result, symbol)
     elsif operation == '-'
+      symbol = :-
       result = number_list.shift
-      number_list.each { |number| result = result - number }
+      result = number_list.reduce(result, symbol)
     elsif operation == '/'
+      symbol = :/
       result = number_list.shift
-      number_list.each { |number| result = result / number }
+      result = number_list.reduce(result, symbol)
     end
 
     result
