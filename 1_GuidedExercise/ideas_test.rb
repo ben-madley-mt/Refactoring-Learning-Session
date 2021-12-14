@@ -142,46 +142,46 @@ class TestIdeas < Minitest::Test
   end
 
   def test_add_2_numbers
-    assert_equal(5, Idea10.new.under_abstracted('+', 2, 3))
+    assert_equal(5, Idea11.new.under_abstracted('+', 2, 3))
   end
 
   def test_add_list_many_numbers
-    assert_equal(13, Idea10.new.under_abstracted('+', [2, 3, 8]))
+    assert_equal(13, Idea11.new.under_abstracted('+', [2, 3, 8]))
   end
 
   def test_times_2_numbers
-    assert_equal(6, Idea10.new.under_abstracted('x', 2, 3))
+    assert_equal(6, Idea11.new.under_abstracted('x', 2, 3))
   end
 
   def test_times_list_many_numbers
-    assert_equal(48, Idea10.new.under_abstracted('x', [2, 3, 8]))
+    assert_equal(48, Idea11.new.under_abstracted('x', [2, 3, 8]))
   end
 
   def test_subtract_2_numbers
-    assert_equal(-1, Idea10.new.under_abstracted('-', 2, 3))
+    assert_equal(-1, Idea11.new.under_abstracted('-', 2, 3))
   end
 
   def test_subtract_list_many_numbers
-    assert_equal(-9, Idea10.new.under_abstracted('-', [2, 3, 8]))
+    assert_equal(-9, Idea11.new.under_abstracted('-', [2, 3, 8]))
   end
 
   def test_divide_2_numbers
-    assert_equal(2, Idea10.new.under_abstracted('÷', 4, 2))
+    assert_equal(2, Idea11.new.under_abstracted('÷', 4, 2))
   end
 
   def test_divide_list_numbers
-    assert_equal(2, Idea10.new.under_abstracted('÷', [4, 2]))
+    assert_equal(2, Idea11.new.under_abstracted('÷', [4, 2]))
   end
 
   def test_divide_list_many_numbers
-    assert_equal(1, Idea10.new.under_abstracted('÷', [8, 4, 2]))
+    assert_equal(1, Idea11.new.under_abstracted('÷', [8, 4, 2]))
   end
 
   def test_empy_always_0
-    assert_equal(0, Idea10.new.under_abstracted('+', []))
-    assert_equal(0, Idea10.new.under_abstracted('x', []))
-    assert_equal(0, Idea10.new.under_abstracted('-', []))
-    assert_equal(0, Idea10.new.under_abstracted('÷', []))
+    assert_equal(0, Idea11.new.under_abstracted('+', []))
+    assert_equal(0, Idea11.new.under_abstracted('x', []))
+    assert_equal(0, Idea11.new.under_abstracted('-', []))
+    assert_equal(0, Idea11.new.under_abstracted('÷', []))
   end
 
 end
