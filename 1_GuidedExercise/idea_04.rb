@@ -4,11 +4,13 @@ class Idea04
     counts = []
 
     words.each do |word|
-      word = word.downcase
       current_count = 0
+
+      word = word.downcase
       ['a', 'e', 'i', 'o', 'u'].each do |vowel|
         current_count += word.count(vowel)
       end
+
       counts.push(current_count)
     end
 
