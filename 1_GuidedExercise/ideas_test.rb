@@ -141,6 +141,18 @@ class TestIdeas < Minitest::Test
     assert_equal(34, Idea09.new.overly_obfuscated(9))
   end
 
+  def test_positive_number
+    assert_equal([18, 27], Idea10.new.similar_functions(9))
+  end
+
+  def test_zero
+    assert_equal([0, 0], Idea10.new.similar_functions(0))
+  end
+
+  def test_negative_number
+    assert_equal([-8, -12], Idea10.new.similar_functions(-4))
+  end
+
   def test_add_2_numbers
     assert_equal(5, Idea11.new.under_abstracted('+', 2, 3))
   end
