@@ -18,14 +18,14 @@ class Idea09
   end
 
   def get_previous_previous_fibonacci_number(n)
-    get_nth_previous_fibonacci_number(n, 2)
+    get_mth_previous_fibonacci_number(n, 2)
   end
 
   def get_previous_fibonacci_number(n)
-    get_nth_previous_fibonacci_number(n, 1)
+    get_mth_previous_fibonacci_number(n, 1)
   end
 
-  def get_nth_previous_fibonacci_number(n, m)
+  def get_mth_previous_fibonacci_number(n, m)
     self.overly_obfuscated(n - m)
   end
 
