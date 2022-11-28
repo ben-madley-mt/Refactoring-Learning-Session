@@ -81,28 +81,28 @@ class TestIdeas < Minitest::Test
   end
 
   def test_remove_spaces
-    assert_equal(true, Idea08.new.move_and_abstract('ABC DEF', 'ABCDEF'))
-    assert_equal(true, Idea08.new.move_and_abstract('ABCDEF', 'ABC DEF'))
+    assert_equal(true, Idea08.new.move_and_extract('ABC DEF', 'ABCDEF'))
+    assert_equal(true, Idea08.new.move_and_extract('ABCDEF', 'ABC DEF'))
   end
 
   def test_different_plates
-    assert_equal(false, Idea08.new.move_and_abstract('X', 'Y'))
-    assert_equal(false, Idea08.new.move_and_abstract('1', '2'))
-    assert_equal(false, Idea08.new.move_and_abstract('B', '1'))
-    assert_equal(false, Idea08.new.move_and_abstract('ONE THING', 'ANOTHER THING'))
+    assert_equal(false, Idea08.new.move_and_extract('X', 'Y'))
+    assert_equal(false, Idea08.new.move_and_extract('1', '2'))
+    assert_equal(false, Idea08.new.move_and_extract('B', '1'))
+    assert_equal(false, Idea08.new.move_and_extract('ONE THING', 'ANOTHER THING'))
   end
 
   def test_similar_letters
-    assert_equal(true, Idea08.new.move_and_abstract('BOB', '808'))
-    assert_equal(true, Idea08.new.move_and_abstract('808', 'BOB'))
-    assert_equal(true, Idea08.new.move_and_abstract('TIM', '71M'))
-    assert_equal(true, Idea08.new.move_and_abstract('71M', 'TIM'))
-    assert_equal(true, Idea08.new.move_and_abstract('ADAM', '404M'))
-    assert_equal(true, Idea08.new.move_and_abstract('404M', 'ADAM'))
-    assert_equal(true, Idea08.new.move_and_abstract('GAZZA', '64224'))
-    assert_equal(true, Idea08.new.move_and_abstract('64224', 'GAZZA'))
-    assert_equal(true, Idea08.new.move_and_abstract('TONY', '70N7'))
-    assert_equal(true, Idea08.new.move_and_abstract('70N7', 'TONY'))
+    assert_equal(true, Idea08.new.move_and_extract('BOB', '808'))
+    assert_equal(true, Idea08.new.move_and_extract('808', 'BOB'))
+    assert_equal(true, Idea08.new.move_and_extract('TIM', '71M'))
+    assert_equal(true, Idea08.new.move_and_extract('71M', 'TIM'))
+    assert_equal(true, Idea08.new.move_and_extract('ADAM', '404M'))
+    assert_equal(true, Idea08.new.move_and_extract('404M', 'ADAM'))
+    assert_equal(true, Idea08.new.move_and_extract('GAZZA', '64224'))
+    assert_equal(true, Idea08.new.move_and_extract('64224', 'GAZZA'))
+    assert_equal(true, Idea08.new.move_and_extract('TONY', '70N7'))
+    assert_equal(true, Idea08.new.move_and_extract('70N7', 'TONY'))
   end
 
   def test_fibonacci_1

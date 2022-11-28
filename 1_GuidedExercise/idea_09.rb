@@ -1,5 +1,5 @@
 class Idea09
-  # Can you use inline and ide hints make this code simpler?
+  # Task: Use inline variable, inline method and ide hints make this code simpler.
   def overly_obfuscated(n)
     first_number = 1
     second_number = 1

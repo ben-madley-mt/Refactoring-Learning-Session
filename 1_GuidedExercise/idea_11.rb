@@ -1,5 +1,5 @@
 class Idea11
-  # Can you use extract method, introduce variable and introduce parameter to make this code clearer?
+  # Task: Use extract method, introduce variable and introduce parameter to make this code clearer.
   def under_abstracted(operation, first_argument, second_argument=nil)
     if second_argument != nil
       number_list = [first_argument, second_argument]

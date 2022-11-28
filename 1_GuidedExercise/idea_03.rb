@@ -1,5 +1,5 @@
 class Idea03
-  # Here we recalculate the average number every iteration. We should extract it as a variable.
+  # Task: Currently we recalculate the average number every iteration. Extract it into a variable.
   def introduce_a_variable(number_list)
     big_numbers = []
 

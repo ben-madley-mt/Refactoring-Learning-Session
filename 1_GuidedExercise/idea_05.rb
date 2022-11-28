@@ -1,7 +1,7 @@
 class Idea05
-  # Shift lines is sort of a matter of preference unless you're trying to do something specific.
-  # Here, can you use shift lines (with Alt + Shift + up and Alt + Shift + down) so that email is completely normalised
-  # first, then the phone number is normalised?
+  # Task: Shift lines is sort of a matter of preference unless you're trying to do something specific.
+  # Use shift lines (with Alt + Shift + up and Alt + Shift + down) so that email is completely normalised
+  # first, then the phone number is normalised.
   def shift_lines(email_address, phone_number)
     email_address = email_address.downcase
     phone_number_parts = phone_number.split

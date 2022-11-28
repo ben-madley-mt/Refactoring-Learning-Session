@@ -1,4 +1,5 @@
 class Idea04
+  # Task: This function has a routine that's repeated for each word of a sentence. Extract it into its own method.
   def extract_a_method(sentence)
     words = sentence.split
     counts = []

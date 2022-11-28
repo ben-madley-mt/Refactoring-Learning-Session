@@ -1,6 +1,6 @@
 class Idea08
-  # A little harder. Move the lines so you can abstract a single function that you call twice
-  def move_and_abstract(plate1, plate2)
+  # Task: A little harder. Move the lines so you can abstract a single function that you call twice.
+  def move_and_extract(plate1, plate2)
     plate1 = plate1.gsub(' ', '')
     plate2 = plate2.gsub(' ', '')
     plate1 = plate1.gsub('A', '4')
