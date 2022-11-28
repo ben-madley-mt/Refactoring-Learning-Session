@@ -4,7 +4,7 @@ class Idea03
     big_numbers = []
 
     number_list.each do |number|
-      if number > number_list.reduce(0, :+)
+      if number > number_list.reduce(0, :+) / number_list.length
         big_numbers.push(number)
       end
     end

@@ -29,7 +29,7 @@ class TestIdeas < Minitest::Test
   end
 
   def test_extracts_numbers_bigger_than_average
-    assert_equal([1], Idea03.new.introduce_a_variable([-1, 1]))
+    assert_equal([2], Idea03.new.introduce_a_variable([1, 1, 2]))
   end
 
   def test_numbers_must_be_strictly_bigger
