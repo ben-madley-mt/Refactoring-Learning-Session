@@ -4,6 +4,7 @@ const {introduce_a_variable} = require("./src/idea_03");
 const {extract_a_method} = require("./src/idea_04");
 const {shift_lines} = require("./src/idea_05");
 const {inline_variables} = require("./src/idea_06");
+const {take_the_hint} = require("./src/idea_07");
 
 describe('Test all ideas', () => {
     describe('Idea 1', () => {
@@ -79,6 +80,16 @@ describe('Test all ideas', () => {
 
         test('Empty array', () => {
             expect(inline_variables([])).toEqual([])
+        })
+    })
+
+    describe('Idea 7', () => {
+        test('Odd', () => {
+            expect(take_the_hint(7)).toEqual(22)
+        })
+
+        test('Even', () => {
+            expect(take_the_hint(34)).toEqual(17)
         })
     })
 })
