@@ -8,6 +8,7 @@ const {take_the_hint} = require("./src/idea_07");
 const {move_and_extract} = require("./src/idea_08");
 const {overly_obfuscated} = require("./src/idea_09");
 const {similar_functions} = require("./src/idea_10");
+const {under_abstracted} = require("./src/idea_11");
 
 describe('Test all ideas', () => {
     describe('Idea 1', () => {
@@ -148,6 +149,51 @@ describe('Test all ideas', () => {
 
         test('Negative number', () => {
             expect(similar_functions(-4)).toEqual([-8, -12])
+        })
+    })
+
+    describe('Idea 11', () => {
+        test('Add two numbers', () => {
+            expect(under_abstracted('+', 2, 3)).toEqual(5)
+        })
+
+        test('Add many numbers', () => {
+            expect(under_abstracted('+', [2, 3, 8])).toEqual(13)
+        })
+
+        test('Times 2 numbers', () => {
+            expect(under_abstracted('x', 2, 3)).toEqual(6)
+        })
+
+        test('Times many numbers', () => {
+            expect(under_abstracted('x', [2, 3, 8])).toEqual(48)
+        })
+
+        test('Subtract 2 numbers', () => {
+            expect(under_abstracted('-', 2, 3)).toEqual(-1)
+        })
+
+        test('Subtract many numbers', () => {
+            expect(under_abstracted('-', [2, 3, 8])).toEqual(-9)
+        })
+
+        test('Divide 2 numbers', () => {
+            expect(under_abstracted('÷', 4, 2)).toEqual(2)
+        })
+
+        test('Divide list numbers', () => {
+            expect(under_abstracted('÷', [4, 2])).toEqual(2)
+        })
+
+        test('Divide many numbers', () => {
+            expect(under_abstracted('÷', [8, 4, 2])).toEqual(1)
+        })
+
+        test('Empty list is always 0', () => {
+            expect(under_abstracted('+', [])).toEqual(0)
+            expect(under_abstracted('x', [])).toEqual(0)
+            expect(under_abstracted('-', [])).toEqual(0)
+            expect(under_abstracted('÷', [])).toEqual(0)
         })
     })
 })
