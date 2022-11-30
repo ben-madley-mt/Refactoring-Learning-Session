@@ -2,6 +2,7 @@ const { rename_a_bad_variable } = require("./src/idea_01");
 const {rename_a_poor_method_name} = require("./src/idea_02");
 const {introduce_a_variable} = require("./src/idea_03");
 const {extract_a_method} = require("./src/idea_04");
+const {shift_lines} = require("./src/idea_05");
 
 describe('Test all ideas', () => {
     describe('Idea 1', () => {
@@ -57,6 +58,16 @@ describe('Test all ideas', () => {
 
         test('Counts vowels in upper case words', () => {
             expect(extract_a_method('HERE IS A LITTLE BIT OF TEXT')).toEqual([2, 1, 1, 2, 1, 1, 1])
+        })
+    })
+
+    describe('Idea 5', () => {
+        test('Normalise email and phone number', () => {
+            expect(shift_lines('TEST@TEST.COM', '07654 321987')).toEqual(['test@test.com', '+447654321987'])
+        })
+
+        test('Remove + section from email', () => {
+            expect(shift_lines('test+remove_this@test.com', '07654 321987')).toEqual(['test@test.com', '+447654321987'])
         })
     })
 })
