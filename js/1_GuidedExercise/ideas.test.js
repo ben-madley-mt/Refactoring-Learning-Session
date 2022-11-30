@@ -6,6 +6,7 @@ const {shift_lines} = require("./src/idea_05");
 const {inline_variables} = require("./src/idea_06");
 const {take_the_hint} = require("./src/idea_07");
 const {move_and_extract} = require("./src/idea_08");
+const {overly_obfuscated} = require("./src/idea_09");
 
 describe('Test all ideas', () => {
     describe('Idea 1', () => {
@@ -118,6 +119,20 @@ describe('Test all ideas', () => {
             expect(move_and_extract('64224', 'GAZZA')).toEqual(true)
             expect(move_and_extract('TONY', '70N7')).toEqual(true)
             expect(move_and_extract('70N7', 'TONY')).toEqual(true)
+        })
+    })
+
+    describe('Idea 9', () => {
+        test('Fibonacci', () => {
+            expect(overly_obfuscated(1)).toEqual(1)
+            expect(overly_obfuscated(2)).toEqual(1)
+            expect(overly_obfuscated(3)).toEqual(2)
+            expect(overly_obfuscated(4)).toEqual(3)
+            expect(overly_obfuscated(5)).toEqual(5)
+            expect(overly_obfuscated(6)).toEqual(8)
+            expect(overly_obfuscated(7)).toEqual(13)
+            expect(overly_obfuscated(8)).toEqual(21)
+            expect(overly_obfuscated(9)).toEqual(34)
         })
     })
 })
