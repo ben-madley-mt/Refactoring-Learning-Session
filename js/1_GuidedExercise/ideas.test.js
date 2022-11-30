@@ -1,6 +1,7 @@
 const { rename_a_bad_variable } = require("./src/idea_01");
 const {rename_a_poor_method_name} = require("./src/idea_02");
 const {introduce_a_variable} = require("./src/idea_03");
+const {extract_a_method} = require("./src/idea_04");
 
 describe('Test all ideas', () => {
     describe('Idea 1', () => {
@@ -46,6 +47,16 @@ describe('Test all ideas', () => {
 
         test('No numbers returned if all the same', () => {
             expect(introduce_a_variable([6, 6, 6, 6])).toEqual([])
+        })
+    })
+
+    describe('Idea 4', () => {
+        test('Counts vowels in each word', () => {
+            expect(extract_a_method('here is a little bit of text')).toEqual([2, 1, 1, 2, 1, 1, 1])
+        })
+
+        test('Counts vowels in upper case words', () => {
+            expect(extract_a_method('HERE IS A LITTLE BIT OF TEXT')).toEqual([2, 1, 1, 2, 1, 1, 1])
         })
     })
 })
