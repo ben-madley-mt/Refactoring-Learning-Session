@@ -1,5 +1,6 @@
 const { rename_a_bad_variable } = require("./src/idea_01");
 const {rename_a_poor_method_name} = require("./src/idea_02");
+const {introduce_a_variable} = require("./src/idea_03");
 
 describe('Test all ideas', () => {
     describe('Idea 1', () => {
@@ -27,6 +28,24 @@ describe('Test all ideas', () => {
 
         test('Handle zero', () => {
             expect(rename_a_poor_method_name([0])).toEqual([0])
+        })
+    })
+
+    describe('Idea 3', () => {
+        test('Extracts numbers bigger than average', () => {
+            expect(introduce_a_variable([1, 1, 2])).toEqual([2])
+        })
+
+        test('Numbers must be strictly bigger', () => {
+            expect(introduce_a_variable([-1, 0, 1])).toEqual([1])
+        })
+
+        test('List can be empty', () => {
+            expect(introduce_a_variable([])).toEqual([])
+        })
+
+        test('No numbers returned if all the same', () => {
+            expect(introduce_a_variable([6, 6, 6, 6])).toEqual([])
         })
     })
 })
