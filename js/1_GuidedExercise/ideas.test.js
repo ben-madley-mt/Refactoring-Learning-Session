@@ -5,6 +5,7 @@ const {extract_a_method} = require("./src/idea_04");
 const {shift_lines} = require("./src/idea_05");
 const {inline_variables} = require("./src/idea_06");
 const {take_the_hint} = require("./src/idea_07");
+const {move_and_extract} = require("./src/idea_08");
 
 describe('Test all ideas', () => {
     describe('Idea 1', () => {
@@ -90,6 +91,33 @@ describe('Test all ideas', () => {
 
         test('Even', () => {
             expect(take_the_hint(34)).toEqual(17)
+        })
+    })
+
+    describe('Idea 8', () => {
+        test('Remove spaces', () => {
+            expect(move_and_extract('ABC DEF', 'ABCDEF')).toEqual(true)
+            expect(move_and_extract('ABCDEF', 'ABC DEF')).toEqual(true)
+        })
+
+        test('Different plates', () => {
+            expect(move_and_extract('X', 'Y')).toEqual(false)
+            expect(move_and_extract('1', '2')).toEqual(false)
+            expect(move_and_extract('B', '1')).toEqual(false)
+            expect(move_and_extract('ONE THING', 'ANOTHER THING')).toEqual(false)
+        })
+
+        test('Similar letters plates', () => {
+            expect(move_and_extract('BOB', '808')).toEqual(true)
+            expect(move_and_extract('808', 'BOB')).toEqual(true)
+            expect(move_and_extract('TIM', '71M')).toEqual(true)
+            expect(move_and_extract('71M', 'TIM')).toEqual(true)
+            expect(move_and_extract('ADAM', '404M')).toEqual(true)
+            expect(move_and_extract('404M', 'ADAM')).toEqual(true)
+            expect(move_and_extract('GAZZA', '64224')).toEqual(true)
+            expect(move_and_extract('64224', 'GAZZA')).toEqual(true)
+            expect(move_and_extract('TONY', '70N7')).toEqual(true)
+            expect(move_and_extract('70N7', 'TONY')).toEqual(true)
         })
     })
 })
