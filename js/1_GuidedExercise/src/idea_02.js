@@ -1,8 +1,8 @@
-// Task: Rename make_bigger to something more specific.
-const rename_a_poor_method_name = (number_list) => {
-  return number_list.map(make_bigger)
+// Task: Rename makeBigger to something more specific.
+const renameAPoorMethodName = (numberList) => {
+    return numberList.map(makeBigger)
 }
 
-const make_bigger = (number) => number * 2
+const makeBigger = (number) => number * 2
 
-module.exports = { rename_a_poor_method_name }
+module.exports = {renameAPoorMethodName}

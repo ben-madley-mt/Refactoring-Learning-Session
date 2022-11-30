@@ -5,4 +5,4 @@ const inline_variables = (numbers) => {
   return numbers.map((number) => number + summand)
 }
 
-module.exports = { inline_variables }
+module.exports = { inlineVariables: inline_variables }
