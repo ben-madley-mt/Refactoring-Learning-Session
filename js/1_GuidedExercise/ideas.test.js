@@ -3,6 +3,7 @@ const {rename_a_poor_method_name} = require("./src/idea_02");
 const {introduce_a_variable} = require("./src/idea_03");
 const {extract_a_method} = require("./src/idea_04");
 const {shift_lines} = require("./src/idea_05");
+const {inline_variables} = require("./src/idea_06");
 
 describe('Test all ideas', () => {
     describe('Idea 1', () => {
@@ -68,6 +69,16 @@ describe('Test all ideas', () => {
 
         test('Remove + section from email', () => {
             expect(shift_lines('test+remove_this@test.com', '07654 321987')).toEqual(['test@test.com', '+447654321987'])
+        })
+    })
+
+    describe('Idea 6', () => {
+        test('Adds 20', () => {
+            expect(inline_variables([1,19, 100])).toEqual([21, 39, 120])
+        })
+
+        test('Empty array', () => {
+            expect(inline_variables([])).toEqual([])
         })
     })
 })
