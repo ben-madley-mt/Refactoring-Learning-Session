@@ -7,6 +7,7 @@ const {inline_variables} = require("./src/idea_06");
 const {take_the_hint} = require("./src/idea_07");
 const {move_and_extract} = require("./src/idea_08");
 const {overly_obfuscated} = require("./src/idea_09");
+const {similar_functions} = require("./src/idea_10");
 
 describe('Test all ideas', () => {
     describe('Idea 1', () => {
@@ -133,6 +134,20 @@ describe('Test all ideas', () => {
             expect(overly_obfuscated(7)).toEqual(13)
             expect(overly_obfuscated(8)).toEqual(21)
             expect(overly_obfuscated(9)).toEqual(34)
+        })
+    })
+
+    describe('Idea 10', () => {
+        test('Positive number', () => {
+            expect(similar_functions(9)).toEqual([18, 27])
+        })
+
+        test('Zero', () => {
+            expect(similar_functions(0)).toEqual([0, 0])
+        })
+
+        test('Negative number', () => {
+            expect(similar_functions(-4)).toEqual([-8, -12])
         })
     })
 })
