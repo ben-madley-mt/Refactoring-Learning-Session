@@ -1,2 +1,2 @@
 test:
-	 bundle exec ruby run_tests.rb
+	 npm i && npm test
