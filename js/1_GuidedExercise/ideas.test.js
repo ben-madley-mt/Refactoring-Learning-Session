@@ -1,14 +1,35 @@
 const { rename_a_bad_variable } = require("./src/idea_01");
+const {rename_a_poor_method_name} = require("./src/idea_02");
 
 describe('Test all ideas', () => {
-    test('Contains space', () => {
-        expect(rename_a_bad_variable('two words')).toEqual(true)
+    describe('Idea 1', () => {
+        test('Contains space', () => {
+            expect(rename_a_bad_variable('two words')).toEqual(true)
+        })
+
+        test('Does not contain space', () => {
+            expect(rename_a_bad_variable('word')).toEqual(false)
+        })
     })
 
-    test('Does not contain space', () => {
-        expect(rename_a_bad_variable('word')).toEqual(false)
+    describe('Idea 2', () => {
+        test('Doubles a list', () => {
+            expect(rename_a_poor_method_name([1, 2, 3])).toEqual([2, 4, 6])
+        })
+
+        test('Handle empty list', () => {
+            expect(rename_a_poor_method_name([])).toEqual([])
+        })
+
+        test('Handle negative numbers', () => {
+            expect(rename_a_poor_method_name([-1])).toEqual([-2])
+        })
+
+        test('Handle zero', () => {
+            expect(rename_a_poor_method_name([0])).toEqual([0])
+        })
     })
-});
+})
 
 // require 'minitest'
 // require 'minitest/autorun'
