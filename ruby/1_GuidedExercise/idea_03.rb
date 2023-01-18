@@ -1,6 +1,8 @@
 class Idea03
   # Task: Currently we recalculate the average number every iteration. Extract it into a variable.
   def introduce_a_variable(number_list)
+    return [] if number_list.length == 0
+
     big_numbers = []
 
     number_list.each do |number|
