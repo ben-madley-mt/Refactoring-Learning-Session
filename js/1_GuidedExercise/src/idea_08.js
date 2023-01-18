@@ -1,4 +1,6 @@
-// Task: Task: A little harder. Move the lines so you can abstract a single function that you call twice.
+// Task: A little harder. Move the lines so you can abstract a single function that you call twice.
+// Helpful hint: Look at the difference between extracting a global method and a extracting a method
+//               within the function
 const moveAndExtract = (plate1, plate2) => {
     plate1 = plate1.replace(/ /g, '')
     plate2 = plate2.replace(/ /g, '')
