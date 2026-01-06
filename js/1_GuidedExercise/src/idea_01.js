@@ -1,4 +1,4 @@
-// Task: Rename word to something better.
+// Task: Rename thing to something better.
 const renameABadVariable = (word) => {
     const thing = ' '
 
